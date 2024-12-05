@@ -1,0 +1,188 @@
+ /* General Body Styling */
+body {
+    font-family: 'Poppins', 'Arial', sans-serif; /* Fallbacks included */
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+    color: #333; /* Default text color */
+}
+
+/* Typography Styling */
+h1, h2, h3 {
+    font-family: 'Lobster', 'Georgia', cursive; /* Fallbacks included */
+    color: #d147a3;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+p {
+    font-family: 'Playfair Display', 'Times New Roman', serif; /* Fallbacks included */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Animated Underline */
+h1::after, h2::after, h3::after, p::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #d147a3; /* Color of the underline */
+    transition: width 0.4s ease-in-out;
+    bottom: -5px;
+    left: 0;
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after, p:hover::after {
+    width: 100%;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #4facfe;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #ffe600; /* Highlight color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Gallery Section Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Space between images */
+    padding: 15px;
+    justify-content: center; /* Center images */
+}
+
+.gallery img {
+    width: 100%; /* Full width of the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill their space */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 5px; /* Padding around the image */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Clock Styling */
+#clock {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: url('path-to-your-background-image.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    background-attachment: fixed;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: slideIn 2s ease-in-out;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    background-color: #ffe4e1;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    text-align: center;
+    animation: fadeInUp 2s;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    border-top: 2px solid #ccc;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
